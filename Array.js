@@ -38,16 +38,37 @@ const findLargest = (x, y, z) => {
 // console.log(findLargest(5,2,4))
 /* 5. Create a function to check if two numbers are in the range 40-60 or 70-100. 
     Return `true` if they do, return `false` if one (or both) don't. */
-
-
+const inRange = (x, y) => {
+    if ((x >= 40 && x <= 60) || (x >= 70 && x <= 100)) {
+        if ((y >= 40 && y <= 60) || (y >= 70 && y <= 100)) {
+            return true
+        } else return false
+    } else return false
+}
+// console.log(inRange(80,20))
 /* 6. Create a function to create a new string composed of a specified number of copies of a given string. 
     Pass the string and the number of copies as parameters. */
-
-
+const copy = (x, y) => {
+    console.log(x)
+    console.log(typeof(x))
+    if (typeof x == "string" && y > 0) {
+        let result = x
+        for (let i = 0; i < y; i++) {
+            result += x
+        }
+        return result
+    } else return "check parameters"
+}
+// console.log(copy("hey ", 4))
 /* 7. Create a function to display the city name if the string begins with "Los" or "New". 
     Pass the city name as a parameter. Return `false` if they start with a different string. */
-
-
+const beginsWith = (x) => {
+    str = x.trim()
+    str = str.charAt(0).toUpperCase() + str.slice(1)
+    if ((str.substring(0, 3) === "Los") || (str.substring(0, 3) === "New")) return true
+    else return false
+}
+// console.log(beginsWith("New York"))
 /* 8. Create a function to calculate and return the sum of all elements from an array with 3 elements. 
     Pass the array as a parameter. */
 
