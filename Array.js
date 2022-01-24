@@ -1,6 +1,14 @@
 /* 1. Create a function to calculate the sum of the two given integers. If the two values are the same, return triple their sum. */
-
-
+const sum = function (x, y) {
+    if (x === y) {
+        return 6 * x
+    } else {
+        return x + y
+    }
+}
+// console.log("Exercise 1:")
+// console.log(sum(2,3))
+// console.log(sum(4,4))
 /* 2. Create a function to check two given integers. Return `true` if one of them is 50 or if their sum is 50. */
 
 
